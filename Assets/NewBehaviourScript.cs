@@ -31,5 +31,7 @@ public class NewBehaviourScript : MonoBehaviour {
         // Får skeppet att bli blått när det svänger höger
         if (Input.GetAxis("Horizontal") < 0) { rend.color = Color.green; }
         // Får skeppet att bli grönt när det svänger vänster
+        if (Input.GetAxis("Horizontal")<0) { transform.Rotate(0, 0, turning * Input.GetAxis("Horizontal") / 2); }
+        // Får skeppet att svänga långsammare åt vänster än åt höger
     }
 }
